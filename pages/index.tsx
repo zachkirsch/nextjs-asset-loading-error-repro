@@ -1,4 +1,14 @@
-/** Add your relevant code here for the issue to reproduce */
+import { useRouter } from "next/router";
+
 export default function Home() {
-  return null;
+  const { push } = useRouter();
+  return (
+    <button
+      onClick={() => {
+        push(window.location.href);
+      }}
+    >
+      route.push(window.location.href)
+    </button>
+  );
 }
